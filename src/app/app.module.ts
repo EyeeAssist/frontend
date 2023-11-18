@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SettingsComponent } from './settings/settings.component';
     SettingsComponent,
   ],
   imports: [
+    ClipboardModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -16,7 +16,32 @@
 <div class='settings-container'>
   <mat-card class="settings-card">
     <mat-card-content>
-
+      <mat-card class="settings-card">
+        <mat-card-content>
+          <mat-card-title>Token</mat-card-title>
+          <mat-card-subtitle>token generado para la biblioteca EyeAssist</mat-card-subtitle>
+          <form #myform = "ngForm">
+            <mat-form-field class="input-token">
+              <mat-label>api-token</mat-label>
+              <input disabled matInput  [type]="hide ? 'password' : 'text'" ngModel [(ngModel)]="token"/>
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide token'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+            </mat-form-field>
+            <button (click)="copiarToClipboard()" class="copy-button" ngxClipboard [cbContent]="token" mat-icon-button>
+              <mat-icon>file_copy</mat-icon>
+            </button>
+            <button type="submit" (click)="renewToken()" class="renew-button" mat-icon-button>
+              <mat-icon>autorenew</mat-icon>
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
     </mat-card-content>
   </mat-card>
 </div>

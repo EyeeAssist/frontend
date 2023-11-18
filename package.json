@@ -27,6 +27,7 @@
     "@popperjs/core": "^2.11.6",
     "@types/youtube": "^0.0.47",
     "bootstrap": "^5.2.3",
+    "ngx-clipboard": "^16.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
